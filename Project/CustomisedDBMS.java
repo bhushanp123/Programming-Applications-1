@@ -77,7 +77,7 @@ class DBMS
                 }
                 else if("Exit".equals(tokens[0]))
                 {
-                    System.out.println("Thank you for using Marvellous DBMS");
+                    System.out.println("Thank you for using DBMS");
                     return;
                 }
             }
