@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="ChangeColour.js"> 
+    
+  </script>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: gray;
+}
+</style>
+</head>
+<body>
+
+ 
+    <button onclick="changeBgColor(1, 'red')">Colour 1st Row Red</button>  
+    <button onclick="changeBgColor(5, 'red')">Colour last Row Red</button>  
+    <button onclick="changeBgColor(0, 'gray')">Reset Colours in Rows</button>  
+
+
+
+<table>
+  <tr>
+    <th>C1</th>
+    <th>C2</th>
+    <th>C3</th>
+  </tr>
+  <tr id=1>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id=2>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id=3>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id=4>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id=5>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+
+</body>
+</html>

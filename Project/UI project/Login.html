@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 550px;
+  padding: 150px;
+  margin-left: 250px;
+}
+
+
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  width: 100%;
+}
+
+
+.container {
+  
+  padding: 16px;
+}
+
+p {
+  text-align: right;
+  float: right;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Log in</h2>
+
+
+<p> or <a href="Register.html">Create an account</a>.</p>
+
+<form action="TablePage.html">
+
+  <div class="container">
+    <label for="Email address"></label>
+    <input type="text" placeholder="Email address" id="emailid" name="Email address" required>
+
+    <label for="Password"></label>
+    <input type="Password" placeholder="Password" id="password" name="Password" required>
+    
+    <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    
+    <p> <a href="ForgetPassword.html">Forgot password?</a>.</p>
+
+    <button type="submit" onclick="return validate();">Log in</button>
+  
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+
+  </div>
+</form>
+<script>
+  var data=[
+  {
+    Email:"hello@test.com",Password:"test"
+
+  },
+  {
+    Email:"john.doe@test.com",Password:"hello"
+
+  },
+  {
+    Email:"john.doe@test.com",Password:"john"
+
+  },
+  ];
+  
+function validate(){
+ debugger
+var email =document.getElementById("emailid").value;
+var pass =document.getElementById("password").value;
+var flag=false;
+for(let i=0;i<data.length;i++){
+  if(data[i].Email==email && data[i].Password==pass){
+    flag=true;
+    break;
+  }
+}
+  if(flag==false){
+    alert('Username or Password is wrong');
+  }
+ return flag;
+ 
+}
+
+</script>
+</body>
+</html>
